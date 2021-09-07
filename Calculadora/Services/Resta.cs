@@ -15,15 +15,8 @@ namespace Calculadora
         public static decimal Subtraction(decimal[] numbers)
         {
 
-            if (numbers == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            if (numbers.Length < 2)
-            {
-                throw new ArgumentException();
-            }
+            Validation.CheckNullParam(numbers);
+            Validation.CheckLengthParams(numbers);
 
             decimal resta = numbers[0];
 

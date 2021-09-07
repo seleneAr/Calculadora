@@ -14,15 +14,8 @@ namespace Calculadora
         public static decimal Sum(decimal[] numbers)
         {
 
-            if(numbers == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            if(numbers.Length < 2)
-            {
-                throw new ArgumentException();
-            }
+            Validation.CheckNullParam(numbers);
+            Validation.CheckLengthParams(numbers);
 
             decimal suma = 0;
 
@@ -42,15 +35,8 @@ namespace Calculadora
         /// <returns></returns>
         public static decimal PositiveSum(decimal[] numbers)
         {
-            if (numbers == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            if (numbers.Length < 2)
-            {
-                throw new ArgumentException();
-            }
+            Validation.CheckNullParam(numbers);
+            Validation.CheckLengthParams(numbers);
 
             decimal suma = 0;
 
@@ -76,15 +62,8 @@ namespace Calculadora
         /// <returns></returns>
         public static decimal NegativeSum(decimal[] numbers)
         {
-            if (numbers == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            if (numbers.Length < 2)
-            {
-                throw new ArgumentException();
-            }
+            Validation.CheckNullParam(numbers);
+            Validation.CheckLengthParams(numbers);
 
             decimal suma = 0;
 

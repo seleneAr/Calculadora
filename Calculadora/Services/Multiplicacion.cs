@@ -12,15 +12,8 @@ namespace Calculadora
         /// <returns></returns>
         public static decimal Multiply(decimal[] numbers)
         {
-            if (numbers == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            if (numbers.Length < 2)
-            {
-                throw new ArgumentException();
-            }
+            Validation.CheckNullParam(numbers);
+            Validation.CheckLengthParams(numbers);
 
             decimal multiplication = numbers[0];
 
@@ -39,15 +32,8 @@ namespace Calculadora
         /// <returns></returns>
         public static decimal EvenNumMultiply(decimal[] numbers)
         {
-            if (numbers == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            if (numbers.Length < 2)
-            {
-                throw new ArgumentException();
-            }
+            Validation.CheckNullParam(numbers);
+            Validation.CheckLengthParams(numbers);
 
             decimal multiplication = 1;
 
@@ -70,15 +56,8 @@ namespace Calculadora
         /// <returns></returns>
         public static decimal NotZeroMultiplication(decimal[] numbers)
         {
-            if (numbers == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            if (numbers.Length < 2)
-            {
-                throw new ArgumentException();
-            }
+            Validation.CheckNullParam(numbers);
+            Validation.CheckLengthParams(numbers);
 
             decimal multiplication = 1;
 
