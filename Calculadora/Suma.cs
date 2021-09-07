@@ -6,6 +6,11 @@ namespace Calculadora
 {
     public class Suma
     {
+    /// <summary>
+    /// Suma de cualquier tipo de numero
+    /// </summary>
+    /// <param name="numbers"></param>
+    /// <returns></returns>
         public static decimal Sum(decimal[] numbers)
         {
 
@@ -29,6 +34,12 @@ namespace Calculadora
             return suma;
         }
 
+
+        /// <summary>
+        /// Suma de numeros positivos
+        /// </summary>
+        /// <param name="numbers"></param>
+        /// <returns></returns>
         public static decimal PositiveSum(decimal[] numbers)
         {
             if (numbers == null)
@@ -57,6 +68,12 @@ namespace Calculadora
 
         }
 
+
+        /// <summary>
+        /// suma de numeros negativos
+        /// </summary>
+        /// <param name="numbers"></param>
+        /// <returns></returns>
         public static decimal NegativeSum(decimal[] numbers)
         {
             if (numbers == null)
