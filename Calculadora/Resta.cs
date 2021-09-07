@@ -25,12 +25,13 @@ namespace Calculadora
                 throw new ArgumentException();
             }
 
-            decimal resta = 0;
+            decimal resta = numbers[0];
 
-            foreach (var number in numbers)
+            for (int i = 1; i < numbers.Length; i++)
             {
-                resta -= number;
+                resta -= numbers[i];
             }
+
 
             return resta;
         }
