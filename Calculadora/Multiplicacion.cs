@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Calculadora
 {
-    class Multiplicacion
+    public class Multiplicacion
     {
         /// <summary>
         /// Multiplicacion de numeros
