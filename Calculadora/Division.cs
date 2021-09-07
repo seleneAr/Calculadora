@@ -33,9 +33,9 @@ namespace Calculadora
         {
             if(num2 == 0)
             {
-                throw new ArithmeticException();
+                throw new DivideByZeroException();
             }
-            return $"{num1 / num2} - {num1 % num2}";
+            return $"{  Decimal.Round(num1 / num2, 3)} - {num1 % num2}";
         }
 
     

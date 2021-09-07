@@ -91,7 +91,7 @@ namespace Calculadora.Test
         public void TestSubtraction()
         {
             decimal[] sub = { 5M, 1.5M };
-            Assert.AreEqual(3.5M, Resta.Subtraction(sub)); // 3 parametro es la precision 
+            Assert.AreEqual(3.5M, Resta.Subtraction(sub)); 
         }
 
         [TestMethod]
@@ -205,7 +205,30 @@ namespace Calculadora.Test
         {
             Assert.AreEqual(2, Division.PositiveDiv(4M, 2M));
         }
+
+        [TestMethod]
+        public void TestPositiveDivNumbers()
+        {
+            Assert.ThrowsException<ArgumentException>(() => Division.PositiveDiv(5M, -3M));
+        }
+
+        [TestMethod]
+        public void TestDivWithRest()
+        {
+            
+            Assert.AreEqual($"1,333 - 1", Division.DivWithRest(4M,3M));
+        }
+
+
+        [TestMethod]
+        public void TestDivWithRestNotZeroDivider()
+        {
+            Assert.ThrowsException<DivideByZeroException>(() => Division.DivWithRest(5M, 0M));
+        }
+
         /*
+         * 
+         * 
          * 
          * 
          * 
